@@ -1,0 +1,28 @@
+<div class="container">
+  <h1>Details:</h1>
+  <a href="/bio/create-form" class="btn btn-success">Add</a><br><br>
+
+  <table class="table">
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Mobile No</th>
+      <th>Email</th>
+      <th>Age</th>
+      <th>Address</th>
+      <th>Action</th>
+    </tr>
+    {{#each node}}
+      <tr>
+        <td>{{this.id}}</td>
+        <td>{{this.name}}</td>
+        <td>{{this.mobile_no}}</td>
+        <td>{{this.email}}</td>
+        <td>{{this.age}}</td> 
+        <td>{{this.address}}</td>
+        <td>
+          <a href="/bio/edit-form/{{this.id}}" class="btn btn-success">Edit</a></td>
+      </tr>
+    {{/each}}
+  </table>
+</div>
